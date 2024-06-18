@@ -1,0 +1,12 @@
+[user]
+	email = 1484119655@qq.com
+	name = fanqiechaodan
+[init]
+	defaultBranch = master
+[alias]
+	graph = graph = log --all --graph --decorate --oneline
+	st = status
+	br = branch
+
+[core]
+	excludesfile = /home/fanqiechaodan/.gitignore_global
