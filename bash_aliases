@@ -10,3 +10,5 @@ alias gs='git status'
 alias gc='git commit'
 alias gcm='git commit -m'
 
+#some tmux aliases
+alias tn='tmux new -t'
