@@ -11,4 +11,6 @@ alias gc='git commit'
 alias gcm='git commit -m'
 
 #some tmux aliases
-alias tn='tmux new -t'
+alias tn='tmux new -s'
+alias ta='tmux attach'
+alias tl='tmux ls'

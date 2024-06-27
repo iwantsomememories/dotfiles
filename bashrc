@@ -169,3 +169,17 @@ fi
 
 unset env
 # <<< ssh agent auto_start <<<
+
+# config for bash-git-prompt
+if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+    GIT_PROMPT_ONLY_IN_REPO=1
+    source "$HOME/.bash-git-prompt/gitprompt.sh"
+fi
+
+export QT_DEBUG_PLUGINS=1
+
+# change tmux_tmpdir
+export TMUX_TMPDIR=~/.tmux/tmp
+
+# tmux completion
+source ~/Code/sh/bash_completion_tmux.sh
