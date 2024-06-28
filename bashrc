@@ -121,16 +121,38 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# Set colors for man pages
+function man() {
+    env \
+        LESS_TERMCAP_mb=$(printf "\e[1;31m") \
+        LESS_TERMCAP_md=$(printf "\e[1;31m") \
+        LESS_TERMCAP_me=$(printf "\e[0m") \
+        LESS_TERMCAP_se=$(printf "\e[0m") \
+        LESS_TERMCAP_so=$(printf "\e[1;44;33m") \
+        LESS_TERMCAP_ue=$(printf "\e[0m") \
+        LESS_TERMCAP_us=$(printf "\e[1;32m") \
+        man "$@"
+}
+
+# >>> pip bash completion >>>
+_pip_completion() {
+    COMPREPLY=($(COMP_WORDS="${COMP_WORDS[*]}" \
+        COMP_CWORD=$COMP_CWORD \
+        PIP_AUTO_COMPLETE=1 $1 2>/dev/null))
+}
+complete -o default -F _pip_completion pip3
+# <<< pip bash completion <<<
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/fanqiechaodan/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$("~/anaconda3/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/fanqiechaodan/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/fanqiechaodan/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "~/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "~/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/fanqiechaodan/anaconda3/bin:$PATH"
+        export PATH="~/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -171,12 +193,11 @@ unset env
 # <<< ssh agent auto_start <<<
 
 # config for bash-git-prompt
-if [ -f "$HOME/.bash-git-prompt/gitprompt.sh" ]; then
+if [ -f ~/.bash-git-prompt/gitprompt.sh ]; then
     GIT_PROMPT_ONLY_IN_REPO=1
-    source "$HOME/.bash-git-prompt/gitprompt.sh"
+    source ~/.bash-git-prompt/gitprompt.sh
 fi
 
-export QT_DEBUG_PLUGINS=1
 
 # change tmux_tmpdir
 export TMUX_TMPDIR=~/.tmux/tmp

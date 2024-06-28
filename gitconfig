@@ -9,4 +9,4 @@
 	br = branch
 
 [core]
-	excludesfile = /home/fanqiechaodan/.gitignore_global
+	excludesfile = ~/.gitignore_global
