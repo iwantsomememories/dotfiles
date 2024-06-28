@@ -7,10 +7,13 @@
 - link:
     ~/.bashrc: bashrc
     ~/.bash_aliases: bash_aliases
+    ~/.bash_logout: bash_logout
     ~/.tmux.conf: tmux.conf
     ~/.vimrc: vimrc
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
+    ~/.condarc: condarc
+
 
 - shell:
     - [git submodule update --init --recursive, Installing submodules]
