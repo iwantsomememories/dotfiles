@@ -7,8 +7,7 @@ alias rmOut='find . -name "*.out" -type f -delete && find . -name "*.o" -type f 
 
 # some git aliases
 alias gs='git status'
-alias gc='git commit'
-alias gcm='git commit -m'
+alias gc='git checkout'
 
 #some tmux aliases
 alias tn='tmux new -s'
