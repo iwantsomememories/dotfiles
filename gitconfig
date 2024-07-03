@@ -4,9 +4,10 @@
 [init]
 	defaultBranch = master
 [alias]
-	graph = graph = log --all --graph --decorate --oneline
+	graph = log --all --graph --decorate --oneline
 	st = status
 	br = branch
+	co = checkout
 
 [core]
 	excludesfile = ~/.gitignore_global
