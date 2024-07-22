@@ -129,5 +129,6 @@ Plug 'mileszs/ack.vim'
 Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'w0rp/ale'
+Plug 'ervandew/supertab'
 
 call plug#end()
