@@ -92,11 +92,6 @@ alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
 
-# some personal aliases
-alias gitfinish='git checkout master && git merge doing && git push && git checkout doing'
-alias rmzoneinent='find . -name "*:Zone.Identifier" -type f -delete'
-
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
@@ -145,14 +140,14 @@ complete -o default -F _pip_completion pip3
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$("~/anaconda3/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/fanqiechaodan/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "~/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "~/anaconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/fanqiechaodan/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/fanqiechaodan/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="~/anaconda3/bin:$PATH"
+        export PATH="/home/fanqiechaodan/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
