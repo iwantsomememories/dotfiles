@@ -130,5 +130,9 @@ Plug 'preservim/nerdtree'
 Plug 'easymotion/vim-easymotion'
 Plug 'w0rp/ale'
 Plug 'ervandew/supertab'
+Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
+
+" enable vscode theme
+colorscheme codedark

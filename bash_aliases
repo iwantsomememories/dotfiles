@@ -10,10 +10,13 @@ alias gs='git status'
 alias gc='git commit'
 alias gitfi='gitfinish'
 
-#some tmux aliases
+# some tmux aliases
 alias tn='tmux new -s'
 alias ta='tmux attach'
 alias tl='tmux ls'
+
+# python aliases
+alias py3t='python3 -m doctest'
 
 gitfinish () {
   git checkout master
