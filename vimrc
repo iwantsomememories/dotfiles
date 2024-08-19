@@ -127,6 +127,10 @@ Plug 'easymotion/vim-easymotion'
 Plug 'w0rp/ale'
 Plug 'ervandew/supertab'
 Plug 'tomasiser/vim-code-dark'
+Plug 'tpope/vim-commentary'
+" gc = comment
+Plug 'kana/vim-textobj-entire'
+" ie & ae = entire document
 
 call plug#end()
 
