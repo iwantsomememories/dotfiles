@@ -118,6 +118,9 @@ set mouse+=a
 " Treat all numbers as decimal
 set nrformats=
 
+" settings about tabs and spaces
+set shiftwidth=4 softtabstop=4 expandtab
+
 call plug#begin()
 
 Plug 'ctrlpvim/ctrlp.vim'
