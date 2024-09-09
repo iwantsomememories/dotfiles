@@ -13,6 +13,7 @@
     ~/.gitconfig: gitconfig
     ~/.gitignore_global: gitignore_global
     ~/.condarc: condarc
+    ~/.profile: profile
 
 
 - shell:
