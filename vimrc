@@ -131,9 +131,13 @@ Plug 'w0rp/ale'
 Plug 'ervandew/supertab'
 Plug 'tomasiser/vim-code-dark'
 Plug 'tpope/vim-commentary'
+Plug 'luochen1990/rainbow'
 " gc = comment
 
 call plug#end()
 
 " enable vscode theme
 colorscheme codedark
+
+" enable rainbow parentheses
+let g:rainbow_active = 1
