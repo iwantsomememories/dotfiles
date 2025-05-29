@@ -471,5 +471,10 @@ hs_err_pid*
 replay_pid*
 # <<< Java git ignore <<<
 
+# >>> Golang git ignore >>>
+go.sum
+
+# <<< Golang git ignore <<<
+
 # lazy_nvim settings
 lazy_lock.json
