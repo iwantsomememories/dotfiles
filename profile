@@ -21,6 +21,10 @@ if [[ -f "$HOME/.local_path" ]]; then
 	. "$HOME/.local_path"
 fi
 
+if [[ -f "$HOME/.local_variable" ]]; then
+        . "$HOME/.local_variable"
+fi
+
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
@@ -32,4 +36,5 @@ if [ -d "$HOME/.local/bin" ] ; then
 fi
 
 export PATH
+# include cargo hint
 . "$HOME/.cargo/env"
